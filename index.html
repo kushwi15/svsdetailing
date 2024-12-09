@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVS Detailing Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    /* Fade-in Animation */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in-up {
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    .animate-fade-in-up:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+
+    .animate-fade-in-up:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .animate-fade-in-up:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+
+    .animate-fade-in-up:nth-child(4) {
+      animation-delay: 0.4s;
+    }
+
+    /* Navbar Background */
+    .navbar {
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(10px);
+    }
+
+    /* Button Hover Effects */
+    .hover-scale {
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .hover-scale:hover {
+      transform: scale(1.1);
+    }
+
+        /* Hover bounce animation for icons */
+        .hover-bounce:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-slate-900 text-white">
+
+<!-- Navbar -->
+<nav class="navbar fixed w-full z-20 top-0 left-0 bg-gray-900 bg-opacity-90 shadow-lg backdrop-filter backdrop-blur-md transition duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <img src="img/logo.png" alt="SV Steel Detailing Logo" class="h-10 mr-3 transition-transform hover:scale-110">
+        <span class="text-white text-2xl font-bold tracking-wide hover:text-orange-500 transition duration-300">
+          SVS Detailing
+        </span>
+      </div>
+  
+      <!-- Navigation Links -->
+      <div class="hidden md:flex space-x-8">
+        <a href="index.html" class="text-white text-lg font-medium hover:text-blue-400 transition-all duration-300 relative group">
+          Home
+          <span class="absolute w-0 h-1 bg-blue-400 bottom-0 left-0 group-hover:w-full transition-all duration-300"></span>
+        </a>
+        <a href="about.html" class="text-white text-lg font-medium hover:text-blue-400 transition-all duration-300 relative group">
+          About
+          <span class="absolute w-0 h-1 bg-blue-400 bottom-0 left-0 group-hover:w-full transition-all duration-300"></span>
+        </a>
+        <a href="services.html" class="text-white text-lg font-medium hover:text-blue-400 transition-all duration-300 relative group">
+          Services
+          <span class="absolute w-0 h-1 bg-blue-400 bottom-0 left-0 group-hover:w-full transition-all duration-300"></span>
+        </a>
+        <a href="project.html" class="text-white text-lg font-medium hover:text-blue-400 transition-all duration-300 relative group">
+          Projects
+          <span class="absolute w-0 h-1 bg-blue-400 bottom-0 left-0 group-hover:w-full transition-all duration-300"></span>
+        </a>
+        <a href="contact.html" class="text-white text-lg font-medium hover:text-blue-400 transition-all duration-300 relative group">
+          Contact
+          <span class="absolute w-0 h-1 bg-blue-400 bottom-0 left-0 group-hover:w-full transition-all duration-300"></span>
+        </a>
+      </div>
+  
+      <!-- Mobile Menu Toggle -->
+      <button id="menu-toggle" class="text-white md:hidden focus:outline-none hover:text-blue-400 transition-transform hover:scale-110">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </div>
+  
+    <!-- Mobile Navigation Links -->
+    <div id="mobile-menu" class="hidden bg-gray-900 bg-opacity-95 px-6 py-4 space-y-4 md:hidden transition-all duration-500">
+      <a href="index.html" class="block text-white text-lg font-medium hover:text-blue-400">Home</a>
+      <a href="about.html" class="block text-white text-lg font-medium hover:text-blue-400">About</a>
+      <a href="services.html" class="block text-white text-lg font-medium hover:text-blue-400">Services</a>
+      <a href="project.html" class="block text-white text-lg font-medium hover:text-blue-400">Projects</a>
+      <a href="contact.html" class="block text-white text-lg font-medium hover:text-blue-400">Contact</a>
+    </div>
+  </nav>
+  
+  <script>
+    // Toggle Mobile Menu
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+  
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('flex');
+    });
+  </script>
+  
+
+  <!-- Hero Section -->
+  <section id="home" class="relative bg-slate-900 pt-24 bg-overlay">
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0">
+      <img
+        src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&q=80"
+        alt="Steel Construction"
+        class="w-full h-full object-cover"
+      />
+    </div>
+
+    <!-- Content -->
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+      <div class="text-center">
+        <!-- Title -->
+        <h1 class="text-5xl tracking-tight font-extrabold text-white sm:text-6xl md:text-7xl animate-fade-in-up">
+          <span class="block">SVS Detailing Services</span>
+          <span class="block text-blue-400">For Modern Construction</span>
+        </h1>
+        
+        <!-- Subtitle -->
+        <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-300 sm:text-xl md:mt-6 md:text-2xl leading-relaxed animate-fade-in-up" style="animation-delay: 0.3s;">
+          Delivering accurate, efficient, and BIM-compliant solutions to bring your construction projects to life.
+        </p>
+        
+        <!-- Buttons -->
+        <div class="mt-8 flex justify-center gap-6 animate-fade-in-up" style="animation-delay: 0.6s;">
+          <a
+            href="contact.html"
+            class="inline-flex items-center px-6 py-3 font-medium text-lg rounded-md text-white bg-blue-500 hover:bg-blue-600 hover-scale shadow-lg"
+          >
+            Get Started
+            <i class="bi bi-arrow-right ml-2"></i>
+          </a>
+          <a
+            href="Steel Detailing services"
+            class="inline-flex items-center px-6 py-3 font-medium text-lg rounded-md text-blue-400 bg-slate-800 hover:bg-slate-700 hover-scale shadow-lg"
+          >
+            Learn More
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="bg-blue-600 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
+        <!-- Stat 1 -->
+        <div class="text-center animate-fade-in-up">
+          <i class="bi bi-building h-8 w-8 mx-auto text-white text-4xl"></i>
+          <p class="mt-4 text-4xl font-extrabold text-white">500+</p>
+          <p class="mt-2 text-white text-opacity-80">Projects Completed</p>
+        </div>
+
+        <!-- Stat 2 -->
+        <div class="text-center animate-fade-in-up">
+          <i class="bi bi-people h-8 w-8 mx-auto text-white text-4xl"></i>
+          <p class="mt-4 text-4xl font-extrabold text-white">200+</p>
+          <p class="mt-2 text-white text-opacity-80">Happy Clients</p>
+        </div>
+
+        <!-- Stat 3 -->
+        <div class="text-center animate-fade-in-up">
+          <i class="bi bi-award h-8 w-8 mx-auto text-white text-4xl"></i>
+          <p class="mt-4 text-4xl font-extrabold text-white">25+</p>
+          <p class="mt-2 text-white text-opacity-80">Industry Awards</p>
+        </div>
+
+        <!-- Stat 4 -->
+        <div class="text-center animate-fade-in-up">
+          <i class="bi bi-clock h-8 w-8 mx-auto text-white text-4xl"></i>
+          <p class="mt-4 text-4xl font-extrabold text-white">15+</p>
+          <p class="mt-2 text-white text-opacity-80">Years Experience</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-8">
+    <div class="container mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 animate-fade-in">
+            <div>
+                <h5 class="text-xl font-bold text-yellow-500 mb-3">SVS Detailing Services</h5>
+                <p>
+                    Professional steel detailing services delivering accurate, efficient, and BIM-compliant solutions for modern construction projects.
+                </p>
+            </div>
+            <div>
+                <h5 class="text-xl font-bold text-yellow-500 mb-3">Quick Links</h5>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="hover:text-yellow-400 transition-colors">Home</a></li>
+                    <li><a href="#services" class="hover:text-yellow-400 transition-colors">Services</a></li>
+                    <li><a href="#projects" class="hover:text-yellow-400 transition-colors">Projects</a></li>
+                    <li><a href="#contact" class="hover:text-yellow-400 transition-colors">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-xl font-bold text-yellow-500 mb-3">Connect With Us</h5>
+                <div class="space-y-4">
+                    <div class="flex items-center hover-bounce">
+                        <i class="bi bi-whatsapp text-green-500 text-2xl mr-3"></i>
+                        <a href="https://wa.me/1234567890" class="hover:text-yellow-400 transition-colors">
+                            WhatsApp: +1 234-567-890
+                        </a>
+                    </div>
+                    <div class="flex items-center hover-bounce">
+                        <i class="bi bi-envelope-fill text-yellow-500 text-2xl mr-3"></i>
+                        <a href="mailto:contact@steeltech.com" class="hover:text-yellow-400 transition-colors">
+                            contact@steeltech.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="my-6 border-gray-700">
+        <div class="text-center">
+            <p class="text-sm">&copy; <span id="currentYear"></span> SVS Detailing Services. All rights reserved.</p>
+        </div>
+    </div>
+  </footer>
+
+<script>
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+</script>
+
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+
+</body>
+</html>
