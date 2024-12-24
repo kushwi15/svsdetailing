@@ -288,62 +288,114 @@
       transition: transform 0.3s ease-in-out;
     }
   </style>
+
+<style>
+  /* Common Button Styles */
+  .filter-btn {
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(to right, #3b82f6, #2563eb, #1d4ed8);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 9999px; /* Fully rounded buttons */
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .filter-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Underline Animation */
+  .filter-btn span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #facc15, #fb923c);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  .filter-btn:hover span {
+    transform: scaleX(1);
+  }
+
+  /* Responsive Button Group */
+  .button-group {
+    display: flex;
+    flex-wrap: wrap; /* Ensure buttons wrap for small screens */
+    justify-content: center;
+    gap: 16px; /* Space between buttons */
+  }
+
+  @media (min-width: 768px) {
+    .button-group {
+      gap: 24px; /* Increase gap for larger screens */
+    }
+  }
+</style>
   
 </head>
 <body class="bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 text-gray-800">
 
-      <!-- Navbar -->
-      <nav class="navbar fixed w-full z-20 top-0 left-0 bg-gray-900 bg-opacity-90 shadow-lg backdrop-filter backdrop-blur-md transition duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-          <!-- Logo -->
-          <div class="flex items-center">
-            <img src="img/logo.png" alt="SV Steel Detailing Logo" class="h-10 mr-3 transition-transform hover:scale-110">
-            <span class="text-white text-2xl font-bold tracking-wide hover:text-orange-500 transition duration-300">
-              SVS Detailing
-            </span>
-          </div>
-      
-          <!-- Navigation Links -->
-          <div class="hidden md:flex space-x-8">
-            <a href="index.html" class="text-white text-lg font-medium hover:text-blue-400 transition-all duration-300 relative group">
-              Home
-              <span class="absolute w-0 h-1 bg-blue-400 bottom-0 left-0 group-hover:w-full transition-all duration-300"></span>
-            </a>
-            <a href="about.html" class="text-white text-lg font-medium hover:text-blue-400 transition-all duration-300 relative group">
-              About
-              <span class="absolute w-0 h-1 bg-blue-400 bottom-0 left-0 group-hover:w-full transition-all duration-300"></span>
-            </a>
-            <a href="services.html" class="text-white text-lg font-medium hover:text-blue-400 transition-all duration-300 relative group">
-              Services
-              <span class="absolute w-0 h-1 bg-blue-400 bottom-0 left-0 group-hover:w-full transition-all duration-300"></span>
-            </a>
-            <a href="project.html" class="text-white text-lg font-medium hover:text-blue-400 transition-all duration-300 relative group">
-              Projects
-              <span class="absolute w-0 h-1 bg-blue-400 bottom-0 left-0 group-hover:w-full transition-all duration-300"></span>
-            </a>
-            <a href="contact.html" class="text-white text-lg font-medium hover:text-blue-400 transition-all duration-300 relative group">
-              Contact
-              <span class="absolute w-0 h-1 bg-blue-400 bottom-0 left-0 group-hover:w-full transition-all duration-300"></span>
-            </a>
-          </div>
-      
-          <!-- Mobile Menu Toggle -->
-          <button id="menu-toggle" class="text-white md:hidden focus:outline-none hover:text-blue-400 transition-transform hover:scale-110">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-            </svg>
-          </button>
-        </div>
-      
-        <!-- Mobile Navigation Links -->
-        <div id="mobile-menu" class="hidden bg-gray-900 bg-opacity-95 px-6 py-4 space-y-4 md:hidden transition-all duration-500">
-          <a href="index.html" class="block text-white text-lg font-medium hover:text-blue-400">Home</a>
-          <a href="about.html" class="block text-white text-lg font-medium hover:text-blue-400">About</a>
-          <a href="services.html" class="block text-white text-lg font-medium hover:text-blue-400">Services</a>
-          <a href="project.html" class="block text-white text-lg font-medium hover:text-blue-400">Projects</a>
-          <a href="contact.html" class="block text-white text-lg font-medium hover:text-blue-400">Contact</a>
-        </div>
-      </nav>
+<!-- Navbar -->
+<nav class="navbar fixed w-full z-20 top-0 left-0 bg-gray-900 bg-opacity-90 shadow-lg backdrop-filter backdrop-blur-md transition duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+    <!-- Logo -->
+    <div class="flex items-center">
+      <img src="img/logo.png" alt="SV Steel Detailing Logo" class="h-10 mr-3 transition-transform hover:scale-110">
+      <!-- <span class="text-white text-2xl font-bold tracking-wide hover:text-orange-500 transition duration-300">
+        SVS Detailing
+      </span> -->
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="hidden md:flex space-x-8">
+      <a href="index.html" class="text-white text-lg font-medium hover:text-blue-400 transition-all duration-300 relative group">
+        Home
+        <span class="absolute w-0 h-1 bg-blue-400 bottom-0 left-0 group-hover:w-full transition-all duration-300"></span>
+      </a>
+      <a href="about.html" class="text-white text-lg font-medium hover:text-blue-400 transition-all duration-300 relative group">
+        About
+        <span class="absolute w-0 h-1 bg-blue-400 bottom-0 left-0 group-hover:w-full transition-all duration-300"></span>
+      </a>
+      <a href="services.html" class="text-white text-lg font-medium hover:text-blue-400 transition-all duration-300 relative group">
+        Services
+        <span class="absolute w-0 h-1 bg-blue-400 bottom-0 left-0 group-hover:w-full transition-all duration-300"></span>
+      </a>
+      <a href="project.html" class="text-white text-lg font-medium hover:text-blue-400 transition-all duration-300 relative group">
+        Projects
+        <span class="absolute w-0 h-1 bg-blue-400 bottom-0 left-0 group-hover:w-full transition-all duration-300"></span>
+      </a>
+      <a href="contact.html" class="text-white text-lg font-medium hover:text-blue-400 transition-all duration-300 relative group">
+        Contact
+        <span class="absolute w-0 h-1 bg-blue-400 bottom-0 left-0 group-hover:w-full transition-all duration-300"></span>
+      </a>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <button id="menu-toggle" class="text-white md:hidden focus:outline-none hover:text-blue-400 transition-transform hover:scale-110">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Navigation Links -->
+  <div id="mobile-menu" class="hidden md:hidden bg-gray-900 bg-opacity-95 px-6 py-4 space-y-4 mobile-menu">
+    <a href="index.html" class="block text-white text-lg font-medium hover:text-blue-400 text-center">Home</a>
+    <a href="about.html" class="block text-white text-lg font-medium hover:text-blue-400 text-center">About</a>
+    <a href="services.html" class="block text-white text-lg font-medium hover:text-blue-400 text-center">Services</a>
+    <a href="project.html" class="block text-white text-lg font-medium hover:text-blue-400 text-center">Projects</a>
+    <a href="contact.html" class="block text-white text-lg font-medium hover:text-blue-400 text-center">Contact</a>
+  </div>
+</nav>
       
       <script>
         // Toggle Mobile Menu
@@ -352,86 +404,154 @@
       
         menuToggle.addEventListener('click', () => {
           mobileMenu.classList.toggle('hidden');
-          mobileMenu.classList.toggle('flex');
+          mobileMenu.classList.toggle('block');
         });
       </script>
 
   <!-- Projects Section -->
-  <section id="projects" class="py-16">
+  <section id="project" class="py-16 mt-16">
     <div class="container mx-auto px-6">
-    <!-- Section Header -->
-
-    <div class="text-center mb-12">
-        <h2 class="text-4xl font-bold text-gray-800">
-          Our Projects
-        </h2>
+      <!-- Section Header -->
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-800">Our Projects</h2>
         <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
-            Explore our portfolio of innovative steel detailing projects, showcasing precision, creativity, and excellence in modern construction solutions.
+          Explore our portfolio of innovative steel detailing projects, showcasing precision, creativity, and excellence in modern construction solutions.
         </p>
       </div>
+  
+<!-- Filter Buttons -->
+<div class="text-center mb-8">
+  <div class="button-group">
+    <button
+      class="filter-btn"
+      data-filter="all"
+    >
+      All
+      <span></span>
+    </button>
+    <button
+      class="filter-btn"
+      data-filter="structural"
+    >
+      Structural
+      <span></span>
+    </button>
+    <button
+      class="filter-btn"
+      data-filter="miscellaneous"
+    >
+      Miscellaneous
+      <span></span>
+    </button>
+    <button
+      class="filter-btn"
+      data-filter="connection"
+    >
+      Connection
+      <span></span>
+    </button>
+  </div>
+</div>
 
       <!-- Project Cards -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          
-        <!-- Project Card 1 -->
-        <div class="project-card" onclick="openModal('img/Bridge-thegem-portfolio-metro.png')">
-          <img src="img/Bridge-thegem-portfolio-metro.png" alt="Bridge Project">
+      <div id="project-cards" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project Card 1 (Structural) -->
+        <div class="project-card structural">
+          <!-- <img src="img/Bridge-thegem-portfolio-metro.png" alt="Bridge Project"> -->
+          <img src="img/church.webp" alt="Chruch Project">
           <div class="content">
             <h3>Bridge Design</h3>
             <p>High-precision steel detailing for modern bridges.</p>
           </div>
         </div>
-        <!-- Project Card 2 -->
-        <div class="project-card" onclick="openModal('img/Commercial-Building-thegem-portfolio-metro.png')">
-          <img src="img/Commercial-Building-thegem-portfolio-metro.png" alt="Commercial Building">
-          <div class="content">
-            <h3>Commercial Building</h3>
-            <p>Structural steel detailing for commercial high-rises.</p>
-          </div>
-        </div>
-        <!-- Project Card 3 -->
-        <div class="project-card" onclick="openModal('img/Decorative-Handrail-111-thegem-portfolio-metro.png')">
-          <img src="img/Decorative-Handrail-111-thegem-portfolio-metro.png" alt="Decorative Handrails">
+        <!-- Project Card 4 (Miscellaneous) -->
+        <div class="project-card miscellaneous">
+          <!-- <img src="img/Decorative-Handrail-111-thegem-portfolio-metro.png" alt="Decorative Handrails"> -->
+          <img src="img/misc1.webp" alt="Miscellaneous Project">
           <div class="content">
             <h3>Decorative Handrails</h3>
             <p>Specialized steel handrails for architectural designs.</p>
           </div>
         </div>
-        <!-- Project Card 4 -->
-        <div class="project-card" onclick="openModal('img/Industrial-Building-1115-thegem-portfolio-metro.png')">
-          <img src="img/Industrial-Building-1115-thegem-portfolio-metro.png" alt="Industrial Building">
+        <!-- Project Card 7 (Connection) -->
+        <div class="project-card connection">
+          <!-- <img src="img/Industrial-Building-1115-thegem-portfolio-metro.png" alt="Industrial Building"> -->
+          <img src="img/bracingcrop.jpg" alt="Bracingcrop Project">
           <div class="content">
             <h3>Industrial Building</h3>
             <p>Steel detailing for industrial and manufacturing plants.</p>
           </div>
         </div>
-        <!-- Project Card 5 -->
-        <div class="project-card" onclick="openModal('img/Warehouse-thegem-portfolio-metro.png')">
-          <img src="img/Warehouse-thegem-portfolio-metro.png" alt="Warehouse">
+        <!-- Project Card 2 (Structural) -->
+        <div class="project-card structural">
+          <!-- <img src="img/Commercial-Building-thegem-portfolio-metro.png" alt="Commercial Building"> -->
+          <img src="img/sawmill.jpg" alt="Sawmill Project">
+          <div class="content">
+            <h3>Commercial Building</h3>
+            <p>Structural steel detailing for commercial high-rises.</p>
+          </div>
+        </div>
+        <!-- Project Card 5 (Miscellaneous) -->
+        <div class="project-card miscellaneous">
+          <img src="img/misc2.gif" alt="Miscellaneous Project">
           <div class="content">
             <h3>Warehouse Structures</h3>
             <p>Efficient and cost-effective warehouse steel designs.</p>
           </div>
         </div>
-        <!-- Project Card 6 -->
-        <div class="project-card" onclick="openModal('img/Commercial-Building51252-thegem-portfolio-metro.png')">
-          <img src="img/Commercial-Building51252-thegem-portfolio-metro.png" alt="Complex Building">
+        <!-- Project Card 8 (Connection) -->
+        <div class="project-card connection">
+          <!-- <img src="img/Industrial-Building-1115-thegem-portfolio-metro.png" alt="Industrial Building"> -->
+          <img src="img/redconect.jpeg" alt="Connection Project">
           <div class="content">
-            <h3>Complex Structures</h3>
-            <p>Innovative steel detailing for complex architectural projects.</p>
+            <h3>Industrial Building</h3>
+            <p>Steel detailing for industrial and manufacturing plants.</p>
+          </div>
+        </div>
+        <!-- Project Card 3 (Structural) -->
+        <div class="project-card structural">
+          <!-- <img src="img/Commercial-Building-thegem-portfolio-metro.png" alt="Commercial Building"> -->
+          <img src="img/s3.png" alt="Project">
+          <div class="content">
+            <h3>Commercial Building</h3>
+            <p>Structural steel detailing for commercial high-rises.</p>
+          </div>
+        </div>
+        <!-- Project Card 6 (Miscellaneous) -->
+        <div class="project-card miscellaneous">
+          <!-- <img src="img/Warehouse-thegem-portfolio-metro.png" alt="Warehouse"> -->
+          <img src="img/misc3.png" alt="Miscellaneous Project">
+          <div class="content">
+            <h3>Warehouse Structures</h3>
+            <p>Efficient and cost-effective warehouse steel designs.</p>
           </div>
         </div>
       </div>
-
-    <!-- Call-to-Action -->
-    <div class="text-center mt-12">
-        <a href="contact.html" class="cta-button bg-yellow-500 text-white py-3 px-6 rounded-lg shadow-lg hover:bg-yellow-600 transition duration-300 text-lg font-bold">
-          Start Your Project <i class="bi bi-arrow-right ms-2"></i>
-        </a>
-    </div>     
-      
     </div>
+
+
   </section>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const projectCards = document.querySelectorAll(".project-card");
+  
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const filter = button.getAttribute("data-filter");
+  
+          projectCards.forEach((card) => {
+            if (filter === "all" || card.classList.contains(filter)) {
+              card.style.display = "block"; // Show matching projects
+            } else {
+              card.style.display = "none"; // Hide non-matching projects
+            }
+          });
+        });
+      });
+    });
+  </script>
 
 <!-- Modal -->
 <div class="modal" id="imageModal">
@@ -461,45 +581,63 @@
 
   <!-- Footer -->
   <footer class="bg-gray-900 text-gray-300 py-8">
-    <div class="container mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 animate-fade-in">
-            <div>
-                <h5 class="text-xl font-bold text-yellow-500 mb-3">SVS Detailing Services</h5>
-                <p>
-                    Professional steel detailing services delivering accurate, efficient, and BIM-compliant solutions for modern construction projects.
-                </p>
-            </div>
-            <div>
-                <h5 class="text-xl font-bold text-yellow-500 mb-3">Quick Links</h5>
-                <ul class="space-y-2">
-                    <li><a href="index.html" class="hover:text-yellow-400 transition-colors">Home</a></li>
-                    <li><a href="#services" class="hover:text-yellow-400 transition-colors">Services</a></li>
-                    <li><a href="#projects" class="hover:text-yellow-400 transition-colors">Projects</a></li>
-                    <li><a href="#contact" class="hover:text-yellow-400 transition-colors">Contact</a></li>
-                </ul>
-            </div>
-            <div>
-                <h5 class="text-xl font-bold text-yellow-500 mb-3">Connect With Us</h5>
-                <div class="space-y-4">
-                    <div class="flex items-center hover-bounce">
-                        <i class="bi bi-whatsapp text-green-500 text-2xl mr-3"></i>
-                        <a href="https://wa.me/1234567890" class="hover:text-yellow-400 transition-colors">
-                            WhatsApp: +1 234-567-890
-                        </a>
-                    </div>
-                    <div class="flex items-center hover-bounce">
-                        <i class="bi bi-envelope-fill text-yellow-500 text-2xl mr-3"></i>
-                        <a href="mailto:contact@steeltech.com" class="hover:text-yellow-400 transition-colors">
-                            contact@steeltech.com
-                        </a>
-                    </div>
-                </div>
-            </div>
+    <div class="container mx-auto px-6">
+      <!-- Footer Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left animate-fade-in">
+        <!-- Company Info -->
+        <div>
+          <h5 class="text-xl font-bold text-yellow-500 mb-3">SVS Detailing Services</h5>
+          <p class="leading-relaxed">
+            Professional steel detailing services delivering accurate, efficient, and BIM-compliant solutions for modern construction projects.
+          </p>
         </div>
-        <hr class="my-6 border-gray-700">
-        <div class="text-center">
-            <p class="text-sm">&copy; <span id="currentYear"></span> SVS Detailing Services. All rights reserved.</p>
+  
+        <!-- Quick Links -->
+        <div>
+          <h5 class="text-xl font-bold text-yellow-500 mb-3">Quick Links</h5>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="hover:text-yellow-400 transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-yellow-400 transition-colors">About</a></li>
+            <li><a href="services.html" class="hover:text-yellow-400 transition-colors">Services</a></li>
+            <li><a href="project.html" class="hover:text-yellow-400 transition-colors">Projects</a></li>
+            <li><a href="contact.html" class="hover:text-yellow-400 transition-colors">Contact</a></li>
+          </ul>
         </div>
+  
+        <!-- Connect With Us -->
+        <div>
+          <h5 class="text-xl font-bold text-yellow-500 mb-3">Connect With Us</h5>
+          <div class="space-y-4">
+            <div class="flex items-center justify-center md:justify-start hover-bounce">
+              <i class="bi bi-whatsapp text-green-500 text-2xl mr-3"></i>
+              <a href="https://wa.me/1234567890" class="hover:text-yellow-400 transition-colors">
+                WhatsApp: +1 234-567-890
+              </a>
+            </div>
+            <div class="flex items-center justify-center md:justify-start hover-bounce">
+              <i class="bi bi-envelope-fill text-yellow-500 text-2xl mr-3"></i>
+              <a href="mailto:contact@steeltech.com" class="hover:text-yellow-400 transition-colors">
+                contact@steeltech.com
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Divider -->
+      <hr class="my-6 border-gray-700">
+  
+      <!-- Copyright -->
+      <div class="text-center">
+        <p class="text-sm">&copy; <span id="currentYear"></span> SVS Detailing Services. All rights reserved.</p>
+        <div class="mt-4 flex items-center justify-center space-x-2">
+          <p class="text-sm">Designed and Developed by</p>
+          <a href="https://github.com/kushwi15" target="_blank" class="flex items-center text-500 hover:text-yellow-400 transition">
+            <img src="img/kushwi-logo.png" alt="Kushwi Logo" class="h-6 mr-2">
+            Kushwi
+          </a>
+        </div>
+      </div>
     </div>
   </footer>
 
