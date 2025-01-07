@@ -345,42 +345,48 @@
 <body class="bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 text-gray-800">
 
 <!-- Navbar -->
-<nav class="navbar fixed w-full z-20 top-0 left-0 bg-gray-900 bg-opacity-90 shadow-lg backdrop-filter backdrop-blur-md transition duration-300">
+<nav 
+  class="navbar fixed w-full z-20 top-0 left-0 shadow-lg backdrop-filter backdrop-blur-md transition duration-300" 
+  style="background: linear-gradient(90deg, #3b3c3d, #335b83, #3b3c3d); /* Gradient Blue */">
+
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
     <!-- Logo -->
     <div class="flex items-center">
-      <img src="img/logo.png" alt="SV Steel Detailing Logo" class="h-10 mr-3 transition-transform hover:scale-110">
-      <!-- <span class="text-white text-2xl font-bold tracking-wide hover:text-orange-500 transition duration-300">
-        SVS Detailing
-      </span> -->
+      <img 
+        src="img/log1.png" 
+        alt="SV Steel Detailing Logo" 
+        style="height: 70px; max-height: 100%; object-fit: contain; margin-right: 12px; transition: transform 0.3s;" 
+        onmouseover="this.style.transform='scale(1.1)'" 
+        onmouseout="this.style.transform='scale(1)'"
+      >
     </div>
 
     <!-- Navigation Links -->
     <div class="hidden md:flex space-x-8">
-      <a href="index.html" class="text-white text-lg font-medium hover:text-blue-400 transition-all duration-300 relative group">
+      <a href="index.html" class="text-white text-lg font-medium hover:text-blue-300 transition-all duration-300 relative group">
         Home
-        <span class="absolute w-0 h-1 bg-blue-400 bottom-0 left-0 group-hover:w-full transition-all duration-300"></span>
+        <span class="absolute w-0 h-1 bg-blue-300 bottom-0 left-0 group-hover:w-full transition-all duration-300"></span>
       </a>
-      <a href="about.html" class="text-white text-lg font-medium hover:text-blue-400 transition-all duration-300 relative group">
+      <a href="about.html" class="text-white text-lg font-medium hover:text-blue-300 transition-all duration-300 relative group">
         About
-        <span class="absolute w-0 h-1 bg-blue-400 bottom-0 left-0 group-hover:w-full transition-all duration-300"></span>
+        <span class="absolute w-0 h-1 bg-blue-300 bottom-0 left-0 group-hover:w-full transition-all duration-300"></span>
       </a>
-      <a href="services.html" class="text-white text-lg font-medium hover:text-blue-400 transition-all duration-300 relative group">
+      <a href="services.html" class="text-white text-lg font-medium hover:text-blue-300 transition-all duration-300 relative group">
         Services
-        <span class="absolute w-0 h-1 bg-blue-400 bottom-0 left-0 group-hover:w-full transition-all duration-300"></span>
+        <span class="absolute w-0 h-1 bg-blue-300 bottom-0 left-0 group-hover:w-full transition-all duration-300"></span>
       </a>
-      <a href="project.html" class="text-white text-lg font-medium hover:text-blue-400 transition-all duration-300 relative group">
+      <a href="project.html" class="text-white text-lg font-medium hover:text-blue-300 transition-all duration-300 relative group">
         Projects
-        <span class="absolute w-0 h-1 bg-blue-400 bottom-0 left-0 group-hover:w-full transition-all duration-300"></span>
+        <span class="absolute w-0 h-1 bg-blue-300 bottom-0 left-0 group-hover:w-full transition-all duration-300"></span>
       </a>
-      <a href="contact.html" class="text-white text-lg font-medium hover:text-blue-400 transition-all duration-300 relative group">
+      <a href="contact.html" class="text-white text-lg font-medium hover:text-blue-300 transition-all duration-300 relative group">
         Contact
-        <span class="absolute w-0 h-1 bg-blue-400 bottom-0 left-0 group-hover:w-full transition-all duration-300"></span>
+        <span class="absolute w-0 h-1 bg-blue-300 bottom-0 left-0 group-hover:w-full transition-all duration-300"></span>
       </a>
     </div>
 
     <!-- Mobile Menu Toggle -->
-    <button id="menu-toggle" class="text-white md:hidden focus:outline-none hover:text-blue-400 transition-transform hover:scale-110">
+    <button id="menu-toggle" class="text-white md:hidden focus:outline-none hover:text-blue-300 transition-transform hover:scale-110">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
       </svg>
@@ -388,12 +394,12 @@
   </div>
 
   <!-- Mobile Navigation Links -->
-  <div id="mobile-menu" class="hidden md:hidden bg-gray-900 bg-opacity-95 px-6 py-4 space-y-4 mobile-menu">
-    <a href="index.html" class="block text-white text-lg font-medium hover:text-blue-400 text-center">Home</a>
-    <a href="about.html" class="block text-white text-lg font-medium hover:text-blue-400 text-center">About</a>
-    <a href="services.html" class="block text-white text-lg font-medium hover:text-blue-400 text-center">Services</a>
-    <a href="project.html" class="block text-white text-lg font-medium hover:text-blue-400 text-center">Projects</a>
-    <a href="contact.html" class="block text-white text-lg font-medium hover:text-blue-400 text-center">Contact</a>
+  <div id="mobile-menu" class="hidden md:hidden px-6 py-4 space-y-4" style="background-color: #3b3c3d, #335b83, #3b3c3d; /* Deep Blue */">
+    <a href="index.html" class="block text-white text-lg font-medium hover:text-blue-300 text-center">Home</a>
+    <a href="about.html" class="block text-white text-lg font-medium hover:text-blue-300 text-center">About</a>
+    <a href="services.html" class="block text-white text-lg font-medium hover:text-blue-300 text-center">Services</a>
+    <a href="project.html" class="block text-white text-lg font-medium hover:text-blue-300 text-center">Projects</a>
+    <a href="contact.html" class="block text-white text-lg font-medium hover:text-blue-300 text-center">Contact</a>
   </div>
 </nav>
       
@@ -574,8 +580,13 @@
       <!-- Footer Grid -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left animate-fade-in">
         <!-- Company Info -->
-        <div>
-          <h5 class="text-xl font-bold text-yellow-500 mb-3">SVS Detailing Services</h5>
+        <div class="text-center">
+          <img 
+            src="img/log1.PNG" 
+            alt="SV Steel Detailing Logo" 
+            style="height: 100px; max-height: 100%; object-fit: contain; margin: 0 auto 12px;" 
+          >
+          <!-- <h5 class="text-xl font-bold text-yellow-500 mb-3">SVS Detailing Services</h5> -->
           <p class="leading-relaxed">
             Professional steel detailing services delivering accurate, efficient, and BIM-compliant solutions for modern construction projects.
           </p>
