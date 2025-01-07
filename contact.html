@@ -53,7 +53,32 @@
     }
   </style>
 </head>
+
+
 <body class="bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 text-gray-800">
+
+  <!-- Hovering WhatsApp & Mail -->
+  <div style="position: fixed; bottom: 250px; right: 30px; z-index: 1000;">
+    <a href="https://wa.me/+919611799955?text=Hello!" target="_blank" style="text-decoration: none;">
+      <img 
+        src="img/wpicon.webp" 
+        alt="WhatsApp Icon" 
+        style="width: 75px; height: 75px; transition: transform 0.3s ease; z-index: 1000;" 
+        onmouseover="this.style.transform='scale(1.1)'" 
+        onmouseout="this.style.transform='scale(1)'"/>
+    </a>
+  </div>  
+
+  <div style="position: fixed; bottom: 175px; right: 30px; z-index: 1000;">
+    <a href="mailto:svsteeldetailing@gmail.com" target="_blank" style="text-decoration: none;">
+      <img 
+        src="img/mailicon.png" 
+        alt="Mail Icon" 
+        style="width: 75px; height: 75px; transition: transform 0.3s ease; z-index: 1000;" 
+        onmouseover="this.style.transform='scale(1.1)'" 
+        onmouseout="this.style.transform='scale(1)'"/>
+    </a>
+  </div> 
 
 <!-- Navbar -->
 <nav 
@@ -126,7 +151,7 @@
 </script>
 
 <!-- Contact Section -->
-<section id="contact" class="py-16 mt-16 bg-slate-900" style="background-size: cover; background-position: center;">
+<section id="contact" class="py-16 mt-16 bg-[#335B83]" style="background-size: cover; background-position: center;">
   <div class="container mx-auto px-6">
     <div class="container mx-auto px-6 relative z-10">
       <div class="text-center mb-12">
@@ -189,11 +214,21 @@
         <div class="space-y-6">
           <div class="flex items-center">
             <i class="bi bi-telephone-fill text-amber-400 text-2xl mr-4"></i>
-            <p>(555) 123-4567</p>
+            <a href="https://wa.me/+919611799955?text=Hello!" target="_blank" class="hover:text-orange-400 transition-colors">
+              +91 9611799955
+            </a>
           </div>
           <div class="flex items-center">
             <i class="bi bi-envelope-fill text-amber-400 text-2xl mr-4"></i>
-            <p>contact@steeltech.com</p>
+            <a href="mailto:svsteeldetailing@gmail.com" target="_blank" class="hover:text-orange-400 transition-colors">
+              svsteeldetailing@gmail.com
+            </a>
+          </div>
+          <div class="flex items-center">
+            <i class="bi bi-envelope-fill text-amber-400 text-2xl mr-4"></i>
+            <a href="salessvsdetailingservices@gmail.com" target="_blank" class="hover:text-orange-400 transition-colors">
+              salessvsdetailingservices@gmail.com
+            </a>
           </div>
           <div class="flex items-center">
             <i class="bi bi-geo-alt-fill text-amber-400 text-2xl mr-4"></i>
@@ -224,9 +259,12 @@
       <!-- Company Info -->
       <div class="text-center">
         <img 
-          src="img/logo.PNG" 
+          src="img/logo.png" 
           alt="SV Steel Detailing Logo" 
-          style="height: 100px; max-height: 100%; object-fit: contain; margin: 0 auto 12px;">
+          style="height: 100px; max-height: 100%; object-fit: contain; margin: 0 auto 12px; transition: transform 0.3s;" 
+          onmouseover="this.style.transform='scale(1.1)'" 
+          onmouseout="this.style.transform='scale(1)'"
+        >
           <!-- <h5 class="text-xl font-bold text-yellow-500 mb-3">SVS Detailing Services</h5> -->
           <p class="leading-relaxed">
             Professional steel detailing services delivering accurate, efficient, and BIM-compliant solutions for modern construction projects.
@@ -251,14 +289,20 @@
         <div class="space-y-4">
           <div class="flex items-center justify-center md:justify-start hover-bounce">
             <i class="bi bi-whatsapp text-green-500 text-2xl mr-3"></i>
-            <a href="https://wa.me/1234567890" class="hover:text-yellow-400 transition-colors">
-              WhatsApp: +1 234-567-890
+            <a href="https://wa.me/+919611799955?text=Hello!" target="_blank" class="hover:text-yellow-400 transition-colors">
+              WhatsApp: +91 9611799955
             </a>
           </div>
           <div class="flex items-center justify-center md:justify-start hover-bounce">
             <i class="bi bi-envelope-fill text-yellow-500 text-2xl mr-3"></i>
-            <a href="mailto:contact@steeltech.com" class="hover:text-yellow-400 transition-colors">
-              contact@steeltech.com
+            <a href="mailto:svsteeldetailing@gmail.com" class="hover:text-yellow-400 transition-colors">
+              svsteeldetailing@gmail.com
+            </a>
+          </div>
+          <div class="flex items-center justify-center md:justify-start hover-bounce">
+            <i class="bi bi-envelope-fill text-yellow-500 text-2xl mr-3"></i>
+            <a href="mailto:salessvsdetailingservices@gmail.com" class="hover:text-yellow-400 transition-colors">
+              salessvsdetailingservices@gmail.com
             </a>
           </div>
         </div>
